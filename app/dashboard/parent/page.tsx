@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { Users, TrendingUp, Calendar, ShoppingCart, Bell, Settings, Eye, Award, BookOpen, Clock } from 'lucide-react';
+import { Users, TrendingUp, Calendar, ShoppingCart, Bell, Settings, Eye, Award, BookOpen, Clock, MessageSquare } from 'lucide-react';
 import Navigation from '@/components/ui/navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -150,11 +150,12 @@ export default function ParentDashboard() {
                           <Badge className="bg-steam-orange text-white text-xs">
                             {child.certificates} certificats
                           </Badge>
+                        </div>
                       </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-steam-blue">{child.progress}%</div>
-                      <div className="text-xs text-gray-500">progression</div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-steam-blue">{child.progress}%</div>
+                        <div className="text-xs text-gray-500">progression</div>
+                      </div>
                     </div>
                   </div>
                 ))}
