@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
+import { type LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DivideIcon as LucideIcon } from 'lucide-react';
 
