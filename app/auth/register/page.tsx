@@ -43,15 +43,15 @@ export default function RegisterPage() {
       id: 'teacher',
       title: 'Teacher/Educator',
       description: 'I want to teach and manage students',
-      icon: <GraduationCap className="w-8 h-8 text-steam-purple" />,
-      color: 'border-steam-purple hover:bg-purple-50'
+      icon: <GraduationCap className="w-8 h-8 text-steam-teal" />,
+      color: 'border-steam-teal hover:bg-teal-50'
     },
     {
       id: 'admin',
       title: 'Administrator',
       description: 'I manage the platform',
-      icon: <Settings className="w-8 h-8 text-steam-orange" />,
-      color: 'border-steam-orange hover:bg-orange-50'
+      icon: <Settings className="w-8 h-8 text-steam-navy" />,
+      color: 'border-steam-navy hover:bg-blue-50'
     }
   ];
 

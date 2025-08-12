@@ -239,9 +239,9 @@ export default function KitsPage() {
                 <Card key={kit.id} className="card-hover relative overflow-hidden">
                   {kit.badge && (
                     <Badge className={`absolute top-3 left-3 z-10 ${
-                      kit.badge === 'Most Popular' ? 'bg-steam-orange' :
+                      kit.badge === 'Most Popular' ? 'bg-steam-light-blue' :
                       kit.badge === 'Best Value' ? 'bg-steam-green' :
-                      kit.badge === 'Premium' ? 'bg-steam-purple' :
+                      kit.badge === 'Premium' ? 'bg-steam-navy' :
                       'bg-gray-500'
                     }`}>
                       {kit.badge}

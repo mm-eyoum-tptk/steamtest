@@ -50,9 +50,9 @@ const config: Config = {
         steam: {
           blue: 'hsl(var(--steam-blue))',
           green: 'hsl(var(--steam-green))',
-          orange: 'hsl(var(--steam-orange))',
-          purple: 'hsl(var(--steam-purple))',
-          yellow: 'hsl(var(--steam-yellow))',
+          teal: 'hsl(var(--steam-teal))',
+          navy: 'hsl(var(--steam-navy))',
+          'light-blue': 'hsl(var(--steam-light-blue))',
         },
       },
       borderRadius: {

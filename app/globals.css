@@ -26,11 +26,11 @@
     --radius: 0.75rem;
     
     /* Custom STEAM Colors */
-    --steam-blue: 221 83% 53%;
-    --steam-green: 142 71% 45%;
-    --steam-orange: 25 95% 53%;
-    --steam-purple: 262 83% 58%;
-    --steam-yellow: 48 96% 53%;
+    --steam-blue: 210 100% 45%;
+    --steam-green: 160 85% 40%;
+    --steam-teal: 180 75% 35%;
+    --steam-navy: 220 60% 25%;
+    --steam-light-blue: 200 90% 60%;
   }
   
   .dark {
@@ -71,18 +71,17 @@
   
   .steam-gradient {
     background: linear-gradient(135deg, 
-      hsl(var(--steam-blue)) 0%, 
-      hsl(var(--steam-green)) 25%, 
-      hsl(var(--steam-orange)) 50%, 
-      hsl(var(--steam-purple)) 75%, 
-      hsl(var(--steam-yellow)) 100%);
+      hsl(var(--steam-navy)) 0%, 
+      hsl(var(--steam-blue)) 30%, 
+      hsl(var(--steam-teal)) 60%, 
+      hsl(var(--steam-green)) 100%);
   }
   
   .steam-text-gradient {
     background: linear-gradient(135deg, 
+      hsl(var(--steam-navy)), 
       hsl(var(--steam-blue)), 
-      hsl(var(--steam-green)), 
-      hsl(var(--steam-purple)));
+      hsl(var(--steam-teal)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -92,7 +91,7 @@
 @layer components {
   .btn-steam {
     @apply inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
-    @apply bg-gradient-to-r from-blue-500 via-green-500 to-purple-500 text-white hover:shadow-lg hover:scale-105 active:scale-95;
+    @apply bg-gradient-to-r from-steam-navy via-steam-blue to-steam-teal text-white hover:shadow-lg hover:scale-105 active:scale-95;
     @apply px-6 py-3;
   }
   
@@ -102,6 +101,6 @@
   
   .badge-earned {
     @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium;
-    @apply bg-gradient-to-r from-yellow-400 to-orange-400 text-white shadow-sm;
+    @apply bg-gradient-to-r from-steam-light-blue to-steam-teal text-white shadow-sm;
   }
 }
