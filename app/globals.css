@@ -91,7 +91,8 @@
 @layer components {
   .btn-steam {
     @apply inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
-    @apply bg-gradient-to-r from-steam-navy via-steam-blue to-steam-teal text-white hover:shadow-lg hover:scale-105 active:scale-95;
+    background: linear-gradient(to right, hsl(var(--steam-navy)), hsl(var(--steam-blue)), hsl(var(--steam-teal)));
+    @apply text-white hover:shadow-lg hover:scale-105 active:scale-95;
     @apply px-6 py-3;
   }
   
