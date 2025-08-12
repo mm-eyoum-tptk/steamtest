@@ -29,7 +29,8 @@ export default function KitsPage() {
       reviews: 124,
       features: ['10 experiments', 'Safety guide', 'Parent handbook', 'Video tutorials'],
       inStock: true,
-      badge: 'Most Popular'
+      badge: 'Most Popular',
+      badgeColor: 'badge-fun'
     },
     {
       id: 2,
@@ -45,7 +46,8 @@ export default function KitsPage() {
       reviews: 89,
       features: ['20 experiments', 'Digital tools', 'Lab equipment', 'Certificate program'],
       inStock: true,
-      badge: 'Best Value'
+      badge: 'Best Value',
+      badgeColor: 'badge-creative'
     },
     {
       id: 3,
@@ -61,7 +63,8 @@ export default function KitsPage() {
       reviews: 45,
       features: ['30+ experiments', 'Arduino kit', 'Microscope', 'Advanced materials'],
       inStock: true,
-      badge: 'Premium'
+      badge: 'Premium',
+      badgeColor: 'bg-gradient-to-r from-steam-navy to-steam-blue text-white'
     },
     {
       id: 4,
@@ -75,7 +78,9 @@ export default function KitsPage() {
       rating: 4.6,
       reviews: 67,
       features: ['Art supplies', 'Design templates', 'Color theory guide', 'Digital tools access'],
-      inStock: true
+      inStock: true,
+      badge: 'Creative',
+      badgeColor: 'bg-gradient-to-r from-steam-pink to-steam-purple text-white'
     },
     {
       id: 5,
@@ -90,7 +95,8 @@ export default function KitsPage() {
       reviews: 156,
       features: ['Robot components', 'Programming software', 'Sensors', 'Building guide'],
       inStock: false,
-      badge: 'Coming Soon'
+      badge: 'Coming Soon',
+      badgeColor: 'bg-gradient-to-r from-steam-orange to-steam-yellow text-white'
     },
     {
       id: 6,
@@ -104,7 +110,9 @@ export default function KitsPage() {
       rating: 4.5,
       reviews: 98,
       features: ['Lab equipment', 'Safe chemicals', 'Experiment guide', 'Safety goggles'],
-      inStock: true
+      inStock: true,
+      badge: 'Science Fun',
+      badgeColor: 'bg-gradient-to-r from-steam-green to-steam-teal text-white'
     }
   ];
 
@@ -131,11 +139,11 @@ export default function KitsPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 via-pink-50 to-orange-50">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 steam-gradient">
+      <section className="pt-24 pb-12 steam-gradient-colorful">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
             STEAM Kits Store
@@ -179,7 +187,7 @@ export default function KitsPage() {
                         onClick={() => setSelectedCategory(category.id)}
                         className={`w-full flex items-center gap-2 p-2 rounded-lg text-sm transition-colors ${
                           selectedCategory === category.id
-                            ? 'bg-steam-blue text-white'
+                            ? 'steam-gradient-fun text-white'
                             : 'text-gray-700 hover:bg-gray-100'
                         }`}
                       >
@@ -205,7 +213,7 @@ export default function KitsPage() {
                         onClick={() => setPriceRange(range.id)}
                         className={`w-full text-left p-2 rounded-lg text-sm transition-colors ${
                           priceRange === range.id
-                            ? 'bg-steam-green text-white'
+                            ? 'steam-gradient-colorful text-white'
                             : 'text-gray-700 hover:bg-gray-100'
                         }`}
                       >
@@ -236,14 +244,9 @@ export default function KitsPage() {
 
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
               {filteredKits.map((kit) => (
-                <Card key={kit.id} className="card-hover relative overflow-hidden">
+                <Card key={kit.id} className="card-colorful relative overflow-hidden">
                   {kit.badge && (
-                    <Badge className={`absolute top-3 left-3 z-10 ${
-                      kit.badge === 'Most Popular' ? 'bg-steam-light-blue' :
-                      kit.badge === 'Best Value' ? 'bg-steam-green' :
-                      kit.badge === 'Premium' ? 'bg-steam-navy' :
-                      'bg-gray-500'
-                    }`}>
+                    <Badge className={`absolute top-3 left-3 z-10 ${kit.badgeColor || 'bg-gray-500'}`}>
                       {kit.badge}
                     </Badge>
                   )}

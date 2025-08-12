@@ -56,7 +56,7 @@ export default function LoginPage() {
           </p>
         </div>
 
-        <Card className="shadow-xl border-0">
+        <Card className="card-colorful shadow-xl border-0">
           <CardHeader className="text-center pb-4">
             <CardTitle className="text-2xl">Sign In</CardTitle>
             <CardDescription>

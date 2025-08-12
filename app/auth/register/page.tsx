@@ -29,29 +29,29 @@ export default function RegisterPage() {
       id: 'learner',
       title: 'Learner',
       description: 'I want to learn STEAM subjects',
-      icon: <Baby className="w-8 h-8 text-steam-blue" />,
-      color: 'border-steam-blue hover:bg-blue-50'
+      icon: <Baby className="w-8 h-8 text-steam-purple" />,
+      color: 'border-steam-purple hover:bg-purple-50'
     },
     {
       id: 'parent',
       title: 'Parent/Guardian',
       description: 'I want to manage my child\'s learning',
-      icon: <Users className="w-8 h-8 text-steam-green" />,
-      color: 'border-steam-green hover:bg-green-50'
+      icon: <Users className="w-8 h-8 text-steam-pink" />,
+      color: 'border-steam-pink hover:bg-pink-50'
     },
     {
       id: 'teacher',
       title: 'Teacher/Educator',
       description: 'I want to teach and manage students',
-      icon: <GraduationCap className="w-8 h-8 text-steam-teal" />,
-      color: 'border-steam-teal hover:bg-teal-50'
+      icon: <GraduationCap className="w-8 h-8 text-steam-orange" />,
+      color: 'border-steam-orange hover:bg-orange-50'
     },
     {
       id: 'admin',
       title: 'Administrator',
       description: 'I manage the platform',
-      icon: <Settings className="w-8 h-8 text-steam-navy" />,
-      color: 'border-steam-navy hover:bg-blue-50'
+      icon: <Settings className="w-8 h-8 text-steam-yellow" />,
+      color: 'border-steam-yellow hover:bg-yellow-50'
     }
   ];
 
@@ -106,8 +106,8 @@ export default function RegisterPage() {
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    i <= step ? 'bg-steam-blue' : 'bg-gray-300'
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    i <= step ? 'steam-gradient-fun' : 'bg-gray-300'
                   }`}
                 />
               ))}
@@ -115,7 +115,7 @@ export default function RegisterPage() {
           </div>
         </div>
 
-        <Card className="shadow-xl border-0">
+        <Card className="card-colorful shadow-xl border-0">
           <CardHeader className="text-center pb-4">
             <CardTitle>
               {step === 1 && 'Choose Your Profile'}

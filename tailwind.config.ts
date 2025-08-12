@@ -53,6 +53,10 @@ const config: Config = {
           teal: 'hsl(var(--steam-teal))',
           navy: 'hsl(var(--steam-navy))',
           'light-blue': 'hsl(var(--steam-light-blue))',
+          purple: 'hsl(var(--steam-purple))',
+          orange: 'hsl(var(--steam-orange))',
+          pink: 'hsl(var(--steam-pink))',
+          yellow: 'hsl(var(--steam-yellow))',
         },
       },
       borderRadius: {

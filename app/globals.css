@@ -31,6 +31,10 @@
     --steam-teal: 180 75% 35%;
     --steam-navy: 220 60% 25%;
     --steam-light-blue: 200 90% 60%;
+    --steam-purple: 270 75% 60%;
+    --steam-orange: 25 95% 55%;
+    --steam-pink: 330 80% 65%;
+    --steam-yellow: 45 95% 60%;
   }
   
   .dark {
@@ -77,11 +81,38 @@
       hsl(var(--steam-green)) 100%);
   }
   
+  .steam-gradient-colorful {
+    background: linear-gradient(135deg, 
+      hsl(var(--steam-blue)) 0%, 
+      hsl(var(--steam-purple)) 25%, 
+      hsl(var(--steam-pink)) 50%, 
+      hsl(var(--steam-orange)) 75%, 
+      hsl(var(--steam-yellow)) 100%);
+  }
+  
+  .steam-gradient-fun {
+    background: linear-gradient(45deg, 
+      hsl(var(--steam-green)) 0%, 
+      hsl(var(--steam-teal)) 33%, 
+      hsl(var(--steam-purple)) 66%, 
+      hsl(var(--steam-pink)) 100%);
+  }
+  
   .steam-text-gradient {
     background: linear-gradient(135deg, 
       hsl(var(--steam-navy)), 
       hsl(var(--steam-blue)), 
       hsl(var(--steam-teal)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .steam-text-gradient-colorful {
+    background: linear-gradient(135deg, 
+      hsl(var(--steam-purple)), 
+      hsl(var(--steam-pink)), 
+      hsl(var(--steam-orange)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -103,5 +134,22 @@
   .badge-earned {
     @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium;
     @apply bg-gradient-to-r from-steam-light-blue to-steam-teal text-white shadow-sm;
+  }
+  
+  .badge-fun {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium text-white shadow-sm;
+    background: linear-gradient(45deg, hsl(var(--steam-purple)), hsl(var(--steam-pink)));
+  }
+  
+  .badge-creative {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium text-white shadow-sm;
+    background: linear-gradient(45deg, hsl(var(--steam-orange)), hsl(var(--steam-yellow)));
+  }
+  
+  .card-colorful {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
   }
 }
